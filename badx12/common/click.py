@@ -1,7 +1,12 @@
 # -*- coding: utf-8 -*-
-from collections import Iterable
+
 
 import click
+try:
+    from collections.abc import Iterable
+except ImportError:
+    from collections import Iterable
+
 
 
 def add_commands(click_group, commands):
